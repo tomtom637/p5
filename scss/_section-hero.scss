@@ -1,0 +1,56 @@
+.section-hero {
+  color: #fff;
+  padding: 0 1.2rem 2rem;
+  &__quote {
+    width: 65%;
+    height: 100%;
+  }
+  &__blockquote {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+  &__signature {
+    width: 100%;
+    display: block;
+    text-align: right;
+    text-transform: uppercase;
+    color: $grey;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: $baby-bear) {
+  .section-hero {
+    &__quote {
+      width: 41%;
+    }
+    &__blockquote {
+      line-height: 1.9;
+    }
+  }
+}
+
+@media (min-width: $mama-bear) {
+  .section-hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    &__quote {
+      width: 25rem;
+    }
+    &__blockquote {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@media (min-width: $papa-bear) {
+  .section-hero {
+    left: 15%;
+  }
+}

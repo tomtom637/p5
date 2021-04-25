@@ -1,0 +1,45 @@
+.section-products {
+  background: $grey;
+  padding: 5rem 0;
+  &__container {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1220px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 2.5rem;
+  }
+  &__article {
+    background: #fff;
+    padding: 1.2rem 1.2rem;
+    margin: 0 auto;
+    border-radius: 10px;
+    max-width: 340px;
+    box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.41);
+  }
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+  &__details {
+    margin-top: 1.2rem;
+  }
+  &__name-n-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1.2rem;
+  }
+  &__name {
+    margin-right: 0.5rem;
+    max-width: 65%;
+  }
+}
+
+@media (min-width: $papa-bear) {
+  .section-products {
+    &__container {
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+  }
+}

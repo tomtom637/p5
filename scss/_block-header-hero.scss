@@ -1,0 +1,24 @@
+.block-header-hero {
+  position: relative;
+  background: url('../img/hero.jpg');
+  background-size: cover;
+  background-position-x: 50%;
+}
+
+@media (min-width: $baby-bear) {
+  .block-header-hero {
+    height: 50vh;
+  }
+}
+
+@media (min-width: $mama-bear) {
+  .block-header-hero {
+    height: 80vh;
+  }
+}
+
+@media (min-width: $papa-bear) {
+  .block-header-hero {
+    background-position-y: 70%;
+  }
+}

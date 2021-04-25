@@ -1,0 +1,22 @@
+.site-footer {
+  background: $dark-grey;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+  &__title {
+    font-size: 1.2rem;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  &__title-italic {
+    font-size: 1.8rem;
+    font-weight: 100;
+    font-style: italic;
+    text-transform: capitalize;
+  }
+  &__copy {
+    font-size: 0.75rem;
+  }
+}

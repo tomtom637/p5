@@ -1,0 +1,60 @@
+.site-header {
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1.2rem;
+    &--white {
+      color: #fff;
+    }
+  }
+  &__title-italic {
+    font-size: 2.2rem;
+    font-weight: 100;
+    font-style: italic;
+    text-transform: capitalize;
+  }
+  &__nav-wrapper {
+    width: 100%;
+    background: $primary;
+  }
+  &__nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.2rem;
+  }
+  &__back-home {
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  &__cart {
+    position: relative;
+    display: block;
+    margin-left: auto;
+  }
+  &__cart-link {
+  }
+  &__cart-icon {
+    transform: scale(0.7);
+    &--white #shopping-cart-solid {
+      fill: #fff;
+    }
+  }
+  &__cart-num {
+    position: absolute;
+    display: block;
+    font-weight: 700;
+    font-size: 1.2rem;
+    right: 0;
+    top: 0;
+    &--white {
+      color: #fff;
+    }
+  }
+}

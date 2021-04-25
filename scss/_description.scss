@@ -1,0 +1,11 @@
+.description {
+  font-size: 0.86rem;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+@media (min-width: $mama-bear) {
+  .description {
+    font-size: 0.95rem;
+  }
+}
