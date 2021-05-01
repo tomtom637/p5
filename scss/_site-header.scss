@@ -58,3 +58,16 @@
     }
   }
 }
+
+@media (min-width: $mama-bear) {
+  .site-header {
+    &__title {
+      font-size: 2rem;
+      word-spacing: 0.5rem;
+      padding-top: 2rem;
+    }
+    &__title-italic {
+      font-size: 2.6rem
+    }  
+  }
+}

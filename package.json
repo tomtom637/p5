@@ -1,0 +1,22 @@
+{
+  "name": "p5",
+  "version": "1.0.0",
+  "description": "The Fifth Project In The Openclassrooms Web Developer Path",
+  "main": "index.js",
+  "scripts": {
+    "tests": "cd tests && npx jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomtom637/p5.git"
+  },
+  "author": "Thomas Lacombe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tomtom637/p5/issues"
+  },
+  "homepage": "https://github.com/tomtom637/p5#readme",
+  "devDependencies": {
+    "jasmine": "^3.7.0"
+  }
+}
