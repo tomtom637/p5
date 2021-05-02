@@ -12,7 +12,6 @@ class Cart {
   // INITIALIZATION OF THE CART
   initialize() {
     if(this.storage.items) return;
-
     this.storage.items = [];
     this.updateCounter();
   }
