@@ -1,8 +1,12 @@
+import cart from '../localStorage/cart.js';
+import navigation from '../localStorage/navigation.js';
+import fetcher from '../requests/fetcher.js';
+
 // RENDERS THE CART NUMBER
 cart.updateCounter();
 
 // MEMO IN LOCAL STORAGE OF THE ARTICLE BEING REQUESTED
-function setNavigation(articleElement) {
+window.setNavigation = (articleElement) => {
   navigation.set(articleElement.dataset.id);
 }
 

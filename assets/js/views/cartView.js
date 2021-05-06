@@ -1,3 +1,6 @@
+import cart from '../localStorage/cart.js';
+import fetcher from '../requests/fetcher.js';
+
 // RENDERS THE CART NUMBER
 cart.updateCounter();
 

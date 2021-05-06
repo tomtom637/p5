@@ -23,3 +23,5 @@ class Fetcher {
 }
 
 const fetcher = new Fetcher();
+
+export default fetcher;

@@ -1,3 +1,7 @@
+import cart from '../localStorage/cart.js';
+import navigation from '../localStorage/navigation.js';
+import fetcher from '../requests/fetcher.js';
+
 // RENDERS THE CART NUMBER
 cart.updateCounter();
 
@@ -15,12 +19,12 @@ const colorPalette = {
 }
 
 // BUTTON CLICK EVENT CALLBACK
-function addToCart(e) {
+window.addToCart = () => {
   cart.addItem(navigation.get());
 }
 
 // COLOR CLICK EVENT CALLBACK
-function setActiveColor(element) {
+window.setActiveColor = element => {
   document.querySelectorAll('.color')
     .forEach(colorElement => {
       if(colorElement.classList.contains('section-single__color--active')) {
@@ -56,14 +60,14 @@ function renderArticleTemplate(articleData) {
           <a
             class="section-single__button button"
             href="cart.html"
-            onclick="addToCart(event)"
+            onclick="addToCart()"
             >
             Add to Cart & Checkout
           </a>
           <a
             class="section-single__button button"
             href="index.html"
-            onclick="addToCart(event)"
+            onclick="addToCart()"
             >
             Add to Cart & Browse Teddies
           </a>

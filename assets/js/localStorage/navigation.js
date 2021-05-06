@@ -8,3 +8,5 @@ class Navigation {
 }
 
 const navigation = new Navigation();
+
+export default navigation;

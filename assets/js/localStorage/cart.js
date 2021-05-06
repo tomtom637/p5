@@ -60,3 +60,5 @@ class Cart {
 }
 
 const cart = new Cart();
+
+export default cart;
