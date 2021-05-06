@@ -24,10 +24,11 @@
 @media (min-width: $baby-bear) {
   .section-hero {
     &__quote {
-      width: 41%;
+      width: 65%;
     }
     &__blockquote {
-      line-height: 1.9;
+      font-size: 1.2rem;
+      line-height: 1.7;
     }
   }
 }
@@ -44,7 +45,7 @@
       width: 25rem;
     }
     &__blockquote {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
     }
   }
 }

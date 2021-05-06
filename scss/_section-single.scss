@@ -1,0 +1,87 @@
+.section-single {
+  padding: 3rem 0;
+  background: $grey;
+  &__container {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 800px;
+  }
+  &__link {
+    color: $primary;
+  }
+  &__article {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-areas: 
+      "image   image"
+      "infos   description"
+      "buttons buttons";
+    gap: 1rem;
+  }
+  &__img {
+    border-radius: 10px;
+    grid-area: image;
+  }
+  &__name-price-n-colors {
+    grid-area: infos;
+  }
+  &__name {
+    margin-bottom: 0.7rem;
+  }
+  &__price {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  &__colors {
+    display: flex;
+  }
+  &__color {
+    margin-right:0.3rem;
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+    &--active {
+      transform: scale(1.3);
+      box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+    }
+  }
+  &__description {
+    grid-area: description;
+    font-size: 1.05rem;
+  }
+  &__buttons {
+    grid-area: buttons;
+    margin: auto;
+    display: flex;
+    flex-direction: column;   
+  }
+  &__button {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: $baby-bear) {
+  .section-single {
+    &__article {
+      grid-template-columns: 3fr 1fr;
+      grid-template-areas: 
+        "image       image"
+        "infos       buttons"
+        "description description";
+    }    
+  }
+}
+
+@media (min-width: $mama-bear) {
+  .section-single {
+    &__article {
+      grid-template-columns: 3fr 2fr;
+      grid-template-areas: 
+        "image       infos"
+        "image       buttons"
+        "description description";
+    }
+    &__name-price-n-colors {
+      margin: auto;
+    }
+  }
+}

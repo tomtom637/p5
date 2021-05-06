@@ -1,0 +1,25 @@
+.section-empty-cart {
+  margin: 1.5rem 0 0;
+  text-align: center;
+  line-height: 2;
+  overflow: hidden;
+  &__link {
+    color: $primary;
+    font-size: 1.3rem;
+    padding-bottom: 0.2rem;
+    border-bottom: 1px solid $primary;
+  }
+  &__illustration {
+    position: relative;
+    margin: 0 auto;
+    height: 350px;
+    width: 500px;
+    overflow: hidden;
+  }
+  &__teddy {
+    position: absolute;
+    top: -80px;
+    right: 0;
+    right: 0;
+  }
+}

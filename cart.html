@@ -52,7 +52,7 @@
                   />
                 </svg>
               </a>
-              <span class="site-header__cart-num">0</span>
+              <span id="cart-num" class="site-header__cart-num"></span>
             </div>
           </nav>
         </div>
@@ -61,17 +61,7 @@
         ! YOUR CART !
        -->
       <p class="your-cart">Your cart</p>
-      <!--
-        ! SECTION EMPTY CART !
-       -->
-      <section class="section-empty-cart">
-        <p class="section-empty-cart__p">
-          Your cart is empty 😢...<br />Go fill it with joy 😊!
-        </p>
-      </section>
-      <!--
-        ! SECTION ITEMS !
-       -->
+      <div id="cart-page-container" class="cart-page-container"></div>
       <!--
         ! FOOTER !
        -->
@@ -86,7 +76,8 @@
         </div>
       </footer>
     </div>
-    <script src="assets/js/cart.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/localStorage/cart.js"></script>
+    <script src="assets/js/requests/fetcher.js"></script>
+    <script src="assets/js/views/cartView.js"></script>
   </body>
 </html>

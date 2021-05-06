@@ -45,7 +45,7 @@
                   fill="#be6f6f" />
               </svg>
             </a>
-            <span class="site-header__cart-num">0</span>
+            <span id="cart-num" class="site-header__cart-num"></span>
           </div>
         </nav>
       </div>
@@ -53,8 +53,20 @@
     <!--
       ! SECTION SINGLE PRODUCT !
     -->
+    <section id="section-single-product" class="section-single">
+      <div class="section-single__container">
+        <!-- RENDERED IN JAVASCRIPT -->
+        <!-- RENDERED IN JAVASCRIPT -->
 
+        <p class="description">
+          It Seems you got here by mistake. Please visit 
+          <a class="section-single__link" href="/">our products page</a>
+        </p>
 
+        <!-- RENDERED IN JAVASCRIPT -->
+        <!-- RENDERED IN JAVASCRIPT -->
+      </div>
+    </section>
     <!--
         ! FOOTER !
     -->
@@ -69,8 +81,10 @@
       </div>
     </footer>
   </div>
-  <script src="assets/js/cart.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/localStorage/cart.js"></script>
+  <script src="assets/js/localStorage/navigation.js"></script>
+  <script src="assets/js/requests/fetcher.js"></script>
+  <script src="assets/js/views/articleView.js"></script>
 </body>
 
 </html>

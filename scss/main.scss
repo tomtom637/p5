@@ -1,11 +1,17 @@
 @import 'variables';
 @import 'reset';
 @import 'general';
+@import 'name';
+@import 'price';
+@import 'description';
+@import 'button';
+@import 'color';
+@import 'your-cart';
 @import 'block-header-hero';
 @import 'site-header';
 @import 'section-hero';
 @import 'section-products';
+@import 'section-single';
+@import 'section-empty-cart';
 @import 'site-footer';
-@import 'name';
-@import 'price';
-@import 'description';
+

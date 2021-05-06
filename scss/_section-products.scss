@@ -10,18 +10,30 @@
     gap: 2.5rem;
   }
   &__article {
+    padding: 1.2rem;
+    margin: 0 auto;
+    background: $grey;
+    border-radius: 15px;
+    border: 6px solid #fff;
+    max-width: 340px;
+    box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.41);
+    transition: all 0.05s ease-in-out;
+  }
+  &__link {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: #fff;
-    padding: 1.2rem 1.2rem;
-    margin: 0 auto;
-    border-radius: 10px;
-    max-width: 340px;
-    box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.41);
+  }
+  &__article:hover {
+    box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.3);
+  }
+  &__link {
+    width: 100%;
+    height: 100%;
   }
   &__img {
     width: 100%;
+    border-radius: 10px;
     height: auto;
   }
   &__details {
@@ -36,6 +48,9 @@
   &__name {
     margin-right: 0.5rem;
     max-width: 65%;
+  }
+  &__price {
+    margin-bottom: 0.2rem;
   }
 }
 
