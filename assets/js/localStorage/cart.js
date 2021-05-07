@@ -25,7 +25,7 @@ class Cart {
     const originalContent = JSON.parse(localStorage.getItem('cart'));
     localStorage.setItem(
       'cart',
-      JSON.stringify([...originalContent, item])
+      JSON.stringify([...originalContent, item].sort())
     );
     this.updateCounter();
   }
@@ -42,12 +42,12 @@ class Cart {
   // REMOVING ONE OF A KIND FROM CART
   removeOne(item) {
     const cartContent = JSON.parse(localStorage.getItem('cart'));
-    cartContent.splice(cartContent.indexOf(item), 1);
-    localStorage.setItem(
-      'cart',
-      JSON.stringify(cartContent)
-    );
-    this.updateCounter();
+      cartContent.splice(cartContent.indexOf(item), 1); 
+      localStorage.setItem(
+        'cart',
+        JSON.stringify(cartContent)
+      );
+      this.updateCounter();
   }
   // EMPTYING THE CART
   emptyOut() {
