@@ -1,0 +1,22 @@
+.section-cart-total {
+  &__container {
+    border-top: 1px solid #bbb;
+    background: $grey;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 
+      ". text price";
+    justify-content: center;
+    align-items: center;
+    padding: 2.3rem 1rem;
+  }
+  &__text {
+    grid-area: text;
+    font-size: 1.3rem;
+    margin: auto;
+  }
+  &__price {
+    grid-area: price;
+    margin-left: auto;
+  }
+}

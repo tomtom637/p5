@@ -31,6 +31,7 @@ window.updateQuantity = element => {
   if(cart.getItems().length === 0) {
     document.getElementById('section-cart-items').innerHTML = renderEmptyCart();
   }
+  renderTotalPrice();
 }
 
 // EMPTY CART TEMPLATE
@@ -102,6 +103,19 @@ function renderCartItemTemplate(itemData, quantity) {
     );
 }
 
+function renderTotalPriceTemplate(total) {
+  return (
+    /*html*/`
+      <div class="section-cart-total__container">
+        <h2 class="section-cart-total__text name">Total</h2>
+        <span class="section-cart-total__price price">
+          $ ${total}
+        </span>
+      </div>
+    `
+  );
+}
+
 async function renderCartItems() {
   const cartContainer = document.getElementById('section-cart-items');
   cartContainer.innerHTML = '';
@@ -119,6 +133,20 @@ async function renderCartItems() {
       .length;
     cartContainer.innerHTML += renderCartItemTemplate(fetchedItem, quantity);
   });
+  renderTotalPrice();
+}
+
+function renderTotalPrice() {
+  const cartContainer = document.getElementById('section-cart-items');
+  const totalContainer = document.getElementById('section-cart-total');
+  let totalPrice = 0;
+  [...cartContainer.children ]
+    .forEach(child => totalPrice += child.dataset.price * child.dataset.quantity / 100);
+  if(!totalPrice) {
+    totalContainer.innerHTML = '';
+    return;  
+  }
+  totalContainer.innerHTML = renderTotalPriceTemplate(totalPrice);
 }
 
 renderCartItems();

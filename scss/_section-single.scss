@@ -67,7 +67,19 @@
         "image       image"
         "infos       buttons"
         "description description";
-    }    
+    }
+    &__img {
+      grid-area: image;
+    }
+    &__name-price-n-colors {
+      grid-area: infos;
+    }
+    &__description {
+      grid-area: description;
+    }
+    &__buttons {
+      grid-area: buttons; 
+    }
   }
 }
 
@@ -80,8 +92,18 @@
         "image       buttons"
         "description description";
     }
+    &__img {
+      grid-area: image;
+    }
     &__name-price-n-colors {
+      grid-area: infos;
       margin: auto;
+    }
+    &__description {
+      grid-area: description;
+    }
+    &__buttons {
+      grid-area: buttons; 
     }
   }
 }
