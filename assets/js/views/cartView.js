@@ -29,7 +29,7 @@ window.updateQuantity = element => {
   priceElement.innerText = `$ ${price * quantity / 100}`;
   quantityElement.innerText = `Quantity - ${quantity}`;
   if(cart.getItems().length === 0) {
-    document.getElementById('section-cart-items').innerHTML = renderEmptyCart();
+    document.querySelector('.cart-n-form').innerHTML = renderEmptyCart();
   }
   renderTotalPrice();
 }
@@ -118,10 +118,10 @@ function renderTotalPriceTemplate(total) {
 
 async function renderCartItems() {
   const cartContainer = document.getElementById('section-cart-items');
-  cartContainer.innerHTML = '';
+  const cartNForm = document.querySelector('.cart-n-form');
   // RENDERS EMPTY CART  
   if(cart.getItems().length === 0) {
-    cartContainer.innerHTML = renderEmptyCart();
+    cartNForm.innerHTML = renderEmptyCart();
     return;
   }
   // RENDERS CART ITEMS
@@ -137,6 +137,7 @@ async function renderCartItems() {
 }
 
 function renderTotalPrice() {
+  if(cart.getItems().length === 0) return;
   const cartContainer = document.getElementById('section-cart-items');
   const totalContainer = document.getElementById('section-cart-total');
   let totalPrice = 0;
