@@ -11,14 +11,6 @@
     margin-bottom: 1rem;
     font-style: italic;
   }
-  &__signature {
-    width: 100%;
-    display: block;
-    text-align: right;
-    text-transform: uppercase;
-    color: $grey;
-    font-weight: 700;
-  }
 }
 
 @media (min-width: $baby-bear) {

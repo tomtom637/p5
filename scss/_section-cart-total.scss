@@ -1,6 +1,7 @@
 .section-cart-total {
   &__container {
     border-top: 1px solid #bbb;
+    border-bottom: 1px solid #bbb;
     background: $grey;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;

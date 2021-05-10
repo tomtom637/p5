@@ -29,7 +29,9 @@ window.updateQuantity = element => {
   priceElement.innerText = `$ ${price * quantity / 100}`;
   quantityElement.innerText = `Quantity - ${quantity}`;
   if(cart.getItems().length === 0) {
-    document.querySelector('.cart-n-form').innerHTML = renderEmptyCart();
+    const cartNForm = document.querySelector('.cart-n-form');
+    cartNForm.innerHTML = renderEmptyCart();
+    cartNForm.style.display = 'inline';
   }
   renderTotalPrice();
 }
@@ -40,9 +42,9 @@ function renderEmptyCart() {
     /*html*/`
       <section class="section-empty-cart">
         <p class="section-empty-cart__p">
-          Your cart is empty 😢...
+          Your cart is empty...
           <br />
-          <a class="section-empty-cart__link" href="/">Go fill it with joy 😊!</a>
+          <a class="section-empty-cart__link" href="/">Fluff it up 😊!</a>
         </p>
         <div class="section-empty-cart__illustration">
           <img class="section-empty-cart__teddy" src="assets/img/teddy.svg" alt="teddies are wonderfull">
@@ -122,6 +124,7 @@ async function renderCartItems() {
   // RENDERS EMPTY CART  
   if(cart.getItems().length === 0) {
     cartNForm.innerHTML = renderEmptyCart();
+    cartNForm.style.display = 'inline';
     return;
   }
   // RENDERS CART ITEMS

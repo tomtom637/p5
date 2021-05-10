@@ -1,8 +1,9 @@
 .cart-n-form {
   display: grid;
-  align-items: center;
-  justify-content: center;
 }
 
-//grid-template-columns: 1fr 1fr;
-//gap: 100px;
+@media (min-width: $mama-bear) {
+  .cart-n-form {
+    grid-template-columns: 1fr 1fr;
+  }
+}
