@@ -21,6 +21,21 @@ class Fetcher {
     const allItems = await this.fetchItem('');
     return allItems;
   }
+  async postOrder(/*obj*/contactInfos, /*arr*/items) {
+    const objToSend = {
+      "contact": contactInfos,
+      "products": items
+    };
+    console.log(objToSend);
+    const jsonResponse = await fetch(this.baseURL + 'order', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(objToSend)
+    });
+    const response = await jsonResponse.json();
+    console.log(response);
+    return response;
+  }
 }
 
 const fetcher = new Fetcher();

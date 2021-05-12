@@ -1,3 +1,7 @@
+import cart from '../localStorage/cart.js';
+import order from '../localStorage/order.js';
+import fetcher from '../requests/fetcher.js';
+
 class Validator {
   constructor({ formId, fieldsIds }) {
     this.formId = formId;
@@ -16,6 +20,12 @@ class Validator {
       this.fields[id].errors = [];
     });
   }
+  createError(error) {
+    const el = document.createElement('span');
+    el.classList.add('section-form__error-message');
+    el.textContent = error;
+    return el;
+  }
   printErrors() {
     const errorMessageElements = document.querySelectorAll('.section-form__error-message');
     errorMessageElements.forEach(el => el.remove());
@@ -25,17 +35,40 @@ class Validator {
 
     for(let field in this.fields) {
       this.fields[field].errors.forEach(err => {
-        const el = document.createElement('span');
-        el.classList.add('section-form__error-message');
-        el.textContent = err;
-        this.fields[field].domElement.insertAdjacentElement('afterend', el);
+        let errorElement = this.createError(err);
+        this.fields[field].domElement.insertAdjacentElement('afterend', errorElement);
         this.fields[field].domElement.classList.add('section-form__error');
       });
     }
   }
-  handleSubmit(e) {
+  async handleSubmit(e) {
     e.preventDefault();
+    const emptyElementsError = document.querySelector('.empty-elements-error');
+    if(emptyElementsError) emptyElementsError.remove();
+
+    for(let field in this.fields) {
+      if(this.fields[field].domElement.value === '') {
+        let errorElement = this.createError('all fields need to be filled up');
+        errorElement.classList.add('empty-elements-error');
+        document.getElementById('submit').insertAdjacentElement('beforebegin', errorElement);
+        return;
+      }
+      if(this.fields[field].errors.length !== 0) return;
+    }
     // POST REQUEST
+    const contactInfos = {
+      'firstName': this.fields['first-name'].domElement.value,
+      'lastName': this.fields['last-name'].domElement.value,
+      'address': this.fields['address'].domElement.value,
+      'city': this.fields['city'].domElement.value,
+      'email': this.fields['email'].domElement.value
+    };
+    const items = cart.getItems();
+
+    const result = await fetcher.postOrder(contactInfos, items);
+    order.set(result);
+    cart.emptyOut();
+    window.location.replace('/confirmation.html');
   }
   validateInput(e) {
     // standard fields cases
