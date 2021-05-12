@@ -70,31 +70,30 @@
           ! FORM !
         -->
         <section class="section-form">
-          <form class="section-form__form" action="" method="">
+          <form id="purchase-form" class="section-form__form" action="" method="">
             <div class="section-form__inner">
               <div class="section-form__form-element">
-                <label for="first_name" class="section-form__label">First name</label>
-                <input type="text" name="first_name" id="first_name" class="section-form__input-field" />
+                <label for="first-name" class="section-form__label">First name</label>
+                <input type="text" name="first-name" id="first-name" class="section-form__input-field" required/>
               </div>
               <div class="section-form__form-element">
-                <label for="last_name" class="section-form__label">Last name</label>
-                <input type="text" name="last_name" id="last_name" class="section-form__input-field" />
+                <label for="last-name" class="section-form__label">Last name</label>
+                <input type="text" name="last-name" id="last-name" class="section-form__input-field" required/>
               </div>
               <div class="section-form__form-element">
                 <label for="address" class="section-form__label">Address</label>
-                <input type="text" name="address" id="address" class="section-form__input-field" />
+                <input type="text" name="address" id="address" class="section-form__input-field" required/>
               </div>
               <div class="section-form__form-element">
                 <label for="city" class="section-form__label">City</label>
-                <input type="text" name="city" id="city" class="section-form__input-field" />
+                <input type="text" name="city" id="city" class="section-form__input-field" required/>
               </div>
               <div class="section-form__form-element">
-                <label for="email" class="section-form__label">Email address</label>
-                <input type="email" name="email" id="email" class="section-form__input-field section-form__error" />
-                <span class="section-form__error-message">This is not a valid email address</span>
+                <label for="email" class="section-form__label">Email</label>
+                <input type="email" name="email" id="email" class="section-form__input-field" required/>
               </div>
               <div class="section-form__form-element">
-                <button class="section-form__submit button" type="submit">ORDER</button>
+                <button id="submit" class="section-form__submit button" type="submit">ORDER</button>
               </div>
             </div>
           </form>

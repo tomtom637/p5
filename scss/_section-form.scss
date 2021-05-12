@@ -24,9 +24,14 @@
   &__error {
     border: 1px solid $red;
     border-radius: 5px;
+    &:focus {
+      outline: 1px solid $red;
+      border: none;
+    }
   }
   &__error-message {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    margin-top: 0.05rem;
     color: $red;
   }
   &__submit {
