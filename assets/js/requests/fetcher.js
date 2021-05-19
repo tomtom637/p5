@@ -1,7 +1,7 @@
 class Fetcher {
   constructor() {
-    //this.baseURL = 'http://localhost:3000/api/teddies/';
-    this.baseURL = 'http://192.168.1.21:3000/api/teddies/';
+    this.baseURL = 'http://localhost:3000/api/teddies/';
+    //this.baseURL = 'http://192.168.1.21:3000/api/teddies/';  // local ip address to test with different devices
   }
   async fetchItem(/*str*/id) {
     const jsonData = await fetch(this.baseURL + id);
